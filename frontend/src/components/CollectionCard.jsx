@@ -19,7 +19,8 @@ export const CollectionCard = ({
   const dispatch = useDispatch();
 
   const releaseDate = new Date(release_date).toLocaleDateString("en-GB");
-  const ourRating = rating;
+  //const ourRating = rating;
+  const ourRating = typeof rating === 'number' ? rating : 0;
 
   return (
     <div
